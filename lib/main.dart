@@ -56,6 +56,7 @@ class _WondersAppState extends State<WondersApp> with GetItStateMixin {
   Widget build(BuildContext context) {
     final locale = watchX((SettingsLogic s) => s.currentLocale);
     return MaterialApp.router(
+      showPerformanceOverlay: true,
       routeInformationProvider: appRouter.routeInformationProvider,
       routeInformationParser: appRouter.routeInformationParser,
       locale: locale == null ? null : Locale(locale),
