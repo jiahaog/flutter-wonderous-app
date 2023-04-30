@@ -1,5 +1,6 @@
 import 'dart:async';
 
+// ignore: unused_import
 import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter_displaymode/flutter_displaymode.dart';
 import 'package:wonders/common_libs.dart';
@@ -30,10 +31,6 @@ class AppLogic {
   /// Loads settings, sets up services etc.
   Future<void> bootstrap() async {
     debugPrint('bootstrap start...');
-    // Set min-sizes for desktop apps
-    if (PlatformInfo.isDesktop) {
-      await DesktopWindow.setMinWindowSize($styles.sizes.minAppSize);
-    }
 
     // Load any bitmaps the views might need
     await AppBitmaps.init();
